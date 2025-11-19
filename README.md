@@ -1,4 +1,4 @@
-# What are some differences between interfaces and types in TypeScript? 
+## What are some differences between interfaces and types in TypeScript? 
 ### Interface আর Type এর মধ্যে পার্থক্য 
 #### 1. Interface মূলত অবজেক্টের স্ট্রাকচার বর্ণনা করতে ব্যবহার হয় ইন্টারফেস বেশি “অবজেক্ট কেমন হবে” সেটা define করতে ব্যবহৃত হয়। আরও একটা সুবিধা হচ্ছে — ইন্টারফেসকে extend করে আরও বড় করতে পারে| 
 #### 2. Type অনেক বেশি flexible টাইপ দিয়ে শুধুমাত্র অবজেক্ট নয় — union, intersection, primitive (string, number), function type—সবকিছু define করতে পারে| 
@@ -27,11 +27,12 @@ type User = {
 type Status = "success" | "error";
 ```
 
-# What is the use of the keyof keyword in TypeScript? Provide an example.
-## keyof কী করে? keyof মূলত কোনো object type-এর সবগুলো key-এর নামকে একটি union type হিসেবে বের করে আনে। মানে, আপনার object এ যে property গুলো আছে— keyof সেগুলোর নামকে string literal type হিসেবে দেয়।
+## What is the use of the keyof keyword in TypeScript? Provide an example.
+#### keyof কী করে? keyof মূলত কোনো object type-এর সবগুলো key-এর নামকে একটি union type হিসেবে বের করে আনে। 
+মানে, object এ যে property গুলো আছে— keyof সেগুলোর নামকে string literal type হিসেবে দেয়।
 এটা খুবই কাজে লাগে যখন আমরা type-safe ভাবে object এর property access করতে চাই। 
 
-### উদাহরণ
+#### উদাহরণ
 
 ```type User = {
   name: string;
